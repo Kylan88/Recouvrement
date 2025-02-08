@@ -1,0 +1,200 @@
+/* Reset de base pour une meilleure uniformité entre navigateurs */
+body, h1, h2, ul, li, form, input, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Couleurs principales */
+:root {
+    --primary-color: #007BFF;  /* Bleu primaire */
+    --secondary-color: #28A745; /* Vert secondaire */
+    --background-color: #F8F9FA; /* Gris clair pour l'arrière-plan */
+    --text-color: #343A40; /* Noir-gris pour le texte */
+    --error-color: #DC3545; /* Rouge pour les erreurs */
+}
+
+/* Style global */
+body {
+    font-family: 'Arial', sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    padding: 20px;
+    line-height: 1.6;
+}
+
+/* Logo */
+.logo img {
+    display: block;
+    max-width: 150px;
+    margin: 0 auto 20px;
+}
+
+/* En-têtes */
+h1 {
+    size: 2rem;
+    text-align: center;
+    font-size: 2rem;
+    color: rgba(9, 95, 110, 0.788);
+    margin-bottom: 20px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: rgba(6, 32, 119, 0.623);
+}
+
+/* Style du bouton déroulant */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    text-align: center; /* Centrer horizontalement */
+    margin: 0 auto; /* Pour centrer le bloc .dropdown */
+}
+
+/* Centrer le bouton dans son conteneur parent */
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Au survol du bouton */
+.dropbtn:hover {
+    background-color: #45a049;
+}
+
+/* Style de la liste déroulante */
+.dropdown-content {
+    display: none;  /* Par défaut, la liste est masquée */
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Item de la liste déroulante */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Au survol d'un item dans la liste déroulante */
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Affiche la liste déroulante quand on passe la souris sur le bouton */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+/* Liste des clients */
+#client-list {
+    list-style-type: none;
+    padding: 10px;
+    background: white;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    max-width: 600px;
+    margin: 10px auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#client-list li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+#client-list li:last-child {
+    border-bottom: none;
+}
+
+/* Formulaire */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+form input, form button {
+    margin-bottom: 15px;
+}
+
+form input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+form input:focus {
+    border-color: var(--primary-color);
+}
+
+form button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* Bouton envoyer des rappels */
+#send-reminders {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: var(--secondary-color);
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#send-reminders:hover {
+    background-color: #218838;
+}
+
+/* Réactivité */
+@media (max-width: 768px) {
+    form, #client-list {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+}

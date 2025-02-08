@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recouvrement</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="logo">
+        <img src="frontend/img/1.jpg" alt="ONG AEIE">
+    </div>
+    <h1>Gestion des Clients SIGIM-AD immobilière </h1>
+    
+    <h2>Liste des clients</h2>
+<div class="dropdown">
+    <button class="dropbtn">Liste des Clients</button>
+    <div id="client-list" class="dropdown-content">
+        <!-- Liste des clients sera insérée ici -->
+    </div>
+</div>
+
+     <!-- formulaire d'ajout de clients -->
+    <h2>Ajouter un Client</h2>
+    <form id="add-client-form">
+        <input type="text" id="client-name" placeholder="Nom du client" required>
+        <input type="tel" id="client-phone" name="phone" pattern="^\+?[0-9]{10,15}$" placeholder="Numéro de téléphone" required>
+        <input type="email" id="client-email" placeholder="Email du client" required>
+        <input 
+            type="text" 
+            id="client-montant" 
+            name="amount" 
+            placeholder="Montant dû" 
+            required 
+            oninput="this.value = this.value.replace(/[^0-9.]/g, '')">
+        <input type="date" id="client-date-echeance" required>
+        <button type="submit">Ajouter le client</button>
+    </form>
+    
+
+    <!-- Ajout d'un bouton pour déclencher manuellement les rappels -->
+    <h2>Envoyer des Rappels</h2>
+    <button id="send-reminders">rappels</button>
+    <div id="reminders-status"></div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
