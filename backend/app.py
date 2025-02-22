@@ -10,6 +10,9 @@ from backend.rappel_recouvrement import rappel_recouvrement
 app = Flask(__name__)
 CORS(app)  # Permet les requêtes CORS
 
+port = int(os.environ.get("PORT", 5000))  # Utilise le port de Railway ou 5000 par défaut
+app.run(host="0.0.0.0", port=port)
+
 @app.route("/")
 def home():
     return "Bienvenue sur mon API ! Accédez aux données via /api/clients"
