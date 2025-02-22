@@ -10,9 +10,9 @@ from backend.rappel_recouvrement import rappel_recouvrement
 app = Flask(__name__)
 CORS(app)  # Permet les requêtes CORS
 
-@app.route('/')
-def hello():
-    return "Hello, World!"
+@app.route("/")
+def home():
+    return "Bienvenue sur mon API ! Accédez aux données via /api/clients"
 
 # S'assurer que le dossier "logs" existe
 LOG_FOLDER = "backend/logs"
